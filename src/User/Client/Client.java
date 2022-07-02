@@ -1,10 +1,13 @@
 package User.Client;
 
 import Booking.Booking;
+import Feedback.Feedback;
 import User.Host.Host;
 import User.User;
 import User.userType;
+import com.sun.org.apache.xml.internal.dtm.ref.DTMAxisIterNodeList;
 
+import java.beans.FeatureDescriptor;
 import java.util.HashSet;
 
 public class Client extends User {
@@ -16,7 +19,9 @@ public class Client extends User {
     }
 
     public void createNewClient(userType type, String name, String surname, String email, String address) {
-        Client client=new Client(type,name,surname,email,address);
+        Client client = new Client(type, name, surname, email, address);
     }
+
+
 
 }

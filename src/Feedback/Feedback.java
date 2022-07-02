@@ -1,5 +1,9 @@
 package Feedback;
 
+import House.House;
+import User.Client.Client;
+import javafx.application.HostServices;
+
 public class Feedback {
     private String id;
     private static int idCounter;
@@ -7,10 +11,25 @@ public class Feedback {
     private String text;
     private int score;
 
-    public Feedback(String title, String text, int score) {
+    private House house;
+    private Client client;
+
+
+    public Feedback(String title, String text, int score, House house, Client client) {
         id = title + idCounter++;
         this.title = title;
         this.text = text;
         this.score = score;
+        this.house= house;
+        this.client= client;
     }
+
+    public void createNewFeedback(String title, String text, int score, House house, Client client){
+        Feedback feedback= new Feedback(title, text, score, house, client);
+        house.addFeedback(feedback);
+        house.getHost().addFeedback(feedback);
+    }
+
+
+
 }

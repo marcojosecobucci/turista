@@ -27,6 +27,10 @@ public class Host extends User {
     }
     public void createNewHost(userType type, String name, String surname, String email, String address) {
         Host host=new Host(type,name,surname,email,address);
+
+    }
+    public void addFeedback(Feedback feedback){
+        feedbacksList.add(feedback);
     }
 
 }

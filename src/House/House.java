@@ -1,6 +1,7 @@
 package House;
 
 import Booking.Booking;
+import Feedback.Feedback;
 import User.Host.Host;
 
 import java.util.Date;
@@ -20,6 +21,10 @@ public class House {
     private int floar;
     private int nightPrice;
     private HashSet<Booking> bookingsList;
+    private HashSet<Feedback> feedbackList;
+
+
+
 
     public House(Host host, int nBooking, String name, Date startBooking,
                  Date endBooking, String address, int localHouse, int bedNumber, int floar, int nightPrice) {
@@ -35,6 +40,11 @@ public class House {
         this.floar = floar;
         this.nightPrice = nightPrice;
         bookingsList = new HashSet<>();
+        feedbackList = new HashSet<>();
+    }
+
+    public Host getHost() {
+        return host;
     }
 
     public String getName() {
@@ -45,6 +55,8 @@ public class House {
         House house=new House(host,0,name,startBooking,endBooking,address,localHouse,bedNumber,floar,nightPrice);
         host.addHouse(house);
     }
-
+    public void addFeedback(Feedback feedback){
+        feedbackList.add(feedback);
+    }
 
 }
