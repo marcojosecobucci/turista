@@ -22,6 +22,11 @@ public class Host extends User {
         housesList = new HashSet<>();
         feedbacksList = new HashSet<>();
     }
-
+    public void addHouse(House house){
+        housesList.add(house);
+    }
+    public void createNewHost(userType type, String name, String surname, String email, String address) {
+        Host host=new Host(type,name,surname,email,address);
+    }
 
 }

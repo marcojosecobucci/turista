@@ -1,6 +1,7 @@
 package User.Client;
 
 import Booking.Booking;
+import User.Host.Host;
 import User.User;
 import User.userType;
 
@@ -13,4 +14,9 @@ public class Client extends User {
         super(type, name, surname, email, address);
         bookingsList = new HashSet<>();
     }
+
+    public void createNewClient(userType type, String name, String surname, String email, String address) {
+        Client client=new Client(type,name,surname,email,address);
+    }
+
 }

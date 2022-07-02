@@ -40,4 +40,11 @@ public class House {
     public String getName() {
         return name;
     }
+    public void createNewHouse(Host host, String name, Date startBooking,
+                               Date endBooking, String address, int localHouse, int bedNumber, int floar, int nightPrice){
+        House house=new House(host,0,name,startBooking,endBooking,address,localHouse,bedNumber,floar,nightPrice);
+        host.addHouse(house);
+    }
+
+
 }
