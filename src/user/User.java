@@ -1,4 +1,4 @@
-package User;
+package user;
 
 public class User {
     private String id;
@@ -9,7 +9,7 @@ public class User {
     private String email;
     private String address;
 
-    public User( userType type, String name, String surname, String email, String address) {
+    public User(userType type, String name, String surname, String email, String address) {
         id = name + idCounter++;
         this.type = type;
         this.name = name;

@@ -1,9 +1,9 @@
-package User.Host;
+package user.host;
 
-import Feedback.Feedback;
-import House.House;
-import User.User;
-import User.userType;
+import feedback.Feedback;
+import house.House;
+import user.User;
+import user.userType;
 
 import java.util.HashSet;
 
@@ -22,14 +22,17 @@ public class Host extends User {
         housesList = new HashSet<>();
         feedbacksList = new HashSet<>();
     }
-    public void addHouse(House house){
+
+    public void addHouse(House house) {
         housesList.add(house);
     }
+
     public void createNewHost(userType type, String name, String surname, String email, String address) {
-        Host host=new Host(type,name,surname,email,address);
+        Host host = new Host(type, name, surname, email, address);
 
     }
-    public void addFeedback(Feedback feedback){
+
+    public void addFeedback(Feedback feedback) {
         feedbacksList.add(feedback);
     }
 

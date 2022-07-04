@@ -1,10 +1,10 @@
 package DB;
 
-import Booking.Booking;
-import Feedback.Feedback;
-import House.House;
-import User.Client.Client;
-import User.Host.Host;
+import booking.Booking;
+import feedback.Feedback;
+import house.House;
+import user.client.Client;
+import user.host.Host;
 
 import java.util.HashSet;
 

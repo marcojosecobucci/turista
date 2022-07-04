@@ -1,13 +1,9 @@
-package User.Client;
+package user.client;
 
-import Booking.Booking;
-import Feedback.Feedback;
-import User.Host.Host;
-import User.User;
-import User.userType;
-import com.sun.org.apache.xml.internal.dtm.ref.DTMAxisIterNodeList;
+import booking.Booking;
+import user.User;
+import user.userType;
 
-import java.beans.FeatureDescriptor;
 import java.util.HashSet;
 
 public class Client extends User {

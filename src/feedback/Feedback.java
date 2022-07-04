@@ -1,8 +1,7 @@
-package Feedback;
+package feedback;
 
-import House.House;
-import User.Client.Client;
-import javafx.application.HostServices;
+import house.House;
+import user.client.Client;
 
 public class Feedback {
     private String id;
@@ -20,16 +19,15 @@ public class Feedback {
         this.title = title;
         this.text = text;
         this.score = score;
-        this.house= house;
-        this.client= client;
+        this.house = house;
+        this.client = client;
     }
 
-    public void createNewFeedback(String title, String text, int score, House house, Client client){
-        Feedback feedback= new Feedback(title, text, score, house, client);
+    public void createNewFeedback(String title, String text, int score, House house, Client client) {
+        Feedback feedback = new Feedback(title, text, score, house, client);
         house.addFeedback(feedback);
         house.getHost().addFeedback(feedback);
     }
-
 
 
 }

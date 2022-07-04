@@ -1,8 +1,8 @@
-package Booking;
+package booking;
 
-import Feedback.Feedback;
-import House.House;
-import User.Client.Client;
+import feedback.Feedback;
+import house.House;
+import user.client.Client;
 
 import java.util.Date;
 import java.util.Scanner;
@@ -26,14 +26,14 @@ public class Booking {
         this.totPrice = totPrice;
     }
 
-    public void createFeedback(){
-        Scanner sc= new Scanner(System.in);
+    public void createFeedback() {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Titolo recensione: ");
-        String title= sc.nextLine();
+        String title = sc.nextLine();
         System.out.println("Inserisci la recensione: ");
-        String text= sc.nextLine();
+        String text = sc.nextLine();
         System.out.println("inserisci un punteggio da 1 a 5");
-        int score= sc.nextInt();
+        int score = sc.nextInt();
 
         feedback.createNewFeedback(title, text, score, house, client);
 

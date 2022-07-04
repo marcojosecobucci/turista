@@ -1,8 +1,8 @@
-package House;
+package house;
 
-import Booking.Booking;
-import Feedback.Feedback;
-import User.Host.Host;
+import booking.Booking;
+import feedback.Feedback;
+import user.host.Host;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -22,8 +22,6 @@ public class House {
     private int nightPrice;
     private HashSet<Booking> bookingsList;
     private HashSet<Feedback> feedbackList;
-
-
 
 
     public House(Host host, int nBooking, String name, Date startBooking,
@@ -50,12 +48,14 @@ public class House {
     public String getName() {
         return name;
     }
+
     public void createNewHouse(Host host, String name, Date startBooking,
-                               Date endBooking, String address, int localHouse, int bedNumber, int floar, int nightPrice){
-        House house=new House(host,0,name,startBooking,endBooking,address,localHouse,bedNumber,floar,nightPrice);
+                               Date endBooking, String address, int localHouse, int bedNumber, int floar, int nightPrice) {
+        House house = new House(host, 0, name, startBooking, endBooking, address, localHouse, bedNumber, floar, nightPrice);
         host.addHouse(house);
     }
-    public void addFeedback(Feedback feedback){
+
+    public void addFeedback(Feedback feedback) {
         feedbackList.add(feedback);
     }
 
